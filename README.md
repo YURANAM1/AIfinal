@@ -42,14 +42,15 @@ class SimpleChatBot:
             r.append(calc_distance(input_sentence,self.questions[n])) #레벤슈타인 거리 리스트화
         best_match_index=r.index(min(r)) #레벤슈타인 최소 거리 인덱스
         return self.answers[best_match_index] #답 도출
-
-# CSV 파일 경로를 지정하세요.
+        
+        
+    # CSV 파일 경로를 지정
 filepath = 'ChatbotData.csv'
 
-# 간단한 챗봇 인스턴스를 생성합니다.
+    # 간단한 챗봇 인스턴스를 생성합니다.
 chatbot = SimpleChatBot(filepath)
 
-# '종료'라는 단어가 입력될 때까지 챗봇과의 대화를 반복합니다.
+    # '종료'라는 단어가 입력될 때까지 챗봇과의 대화를 반복합니다.
 while True:
     input_sentence = input('You: ')
     if input_sentence.lower() == '종료':
