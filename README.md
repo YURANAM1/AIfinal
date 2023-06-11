@@ -44,14 +44,14 @@ class SimpleChatBot:
         return self.answers[best_match_index] #답 도출
         
         
-    # CSV 파일 경로를 지정
-filepath = 'ChatbotData.csv'
 
-    # 간단한 챗봇 인스턴스를 생성합니다.
-chatbot = SimpleChatBot(filepath)
+filepath = 'ChatbotData.csv' # CSV 파일 경로를 지정
 
-    # '종료'라는 단어가 입력될 때까지 챗봇과의 대화를 반복합니다.
-while True:
+    
+chatbot = SimpleChatBot(filepath)  # 간단한 챗봇 인스턴스를 생성합니다.
+
+    
+while True:  # '종료'라는 단어가 입력될 때까지 챗봇과의 대화를 반복합니다.
     input_sentence = input('You: ')
     if input_sentence.lower() == '종료':
         break
